@@ -91,7 +91,6 @@ def h(p1, p2):
 	return abs(x1-x2) + abs(y1-y2)
 
 def reconstruct_path(came_from, start, current, draw):
-	print(start.get_pos())
 	while current in came_from:
 		current = came_from[current]
 		if(current.get_pos() != start.get_pos()):
