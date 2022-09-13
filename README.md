@@ -17,4 +17,4 @@
 * Add barriers if you wish after selecting the start & end points
 * Switch Algorithm by pressing the Right_Arrow on you keyboard
 * Clean the map by pressing C on you keyboard
-* run the algorithm by pressing SPACE on your keyboard
+* Run the algorithm by pressing SPACE on your keyboard
