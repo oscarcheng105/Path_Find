@@ -1,5 +1,6 @@
 # Pathfinding Algorithm Visualizer
-* This program uses python and pygame for algorithm visualization (inspired by https://www.youtube.com/watch?v=JtiK0DOeI4A&t=941s)
+* This project is inspired by https://www.youtube.com/watch?v=JtiK0DOeI4A&t=941s
+* The program uses python and pygame for algorithm visualization
 * The implemented algorithm include:
   * A* Algorithm
   * Dijkstra's Algorithm
