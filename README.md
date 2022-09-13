@@ -9,8 +9,10 @@
 
 # Instructions
 * To run the program, run the env then run the base program:
+```
   source env/bin/activate
   python3 path_find.py
+```
 * Select the start (blue) and end (red) point by left click, or cancel by right click
 * Add barriers if you wish aafter selecting the start & end points
 * Switch Algorithm by pressing the Right_Arrow on you keyboard
