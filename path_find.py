@@ -2,6 +2,7 @@ from utils import *
 from a_star import a_star
 from dfs import dfs
 from bfs import bfs
+from dijkstra import dijkstra
 
 WIDTH = 800
 WIN = pygame.display.set_mode((WIDTH,WIDTH))
@@ -51,6 +52,8 @@ def get_clicked_pos(pos, rows, width):
 def main(win, width):
 	ROWS = 50
 	grid = make_grid(ROWS, width)
+	algs = ["a_star", "dijkstra", "dfs", "bfs"]
+	curr_alg = 0
 
 	start = None
 	end = None
@@ -94,10 +97,26 @@ def main(win, width):
 						for node in row:
 							node.update_neighbors(grid)
 					clean_grid(grid, ROWS, start, end)
-					#a_star(lambda: draw(win, grid, ROWS, width), grid, start, end)
-					#dfs(lambda: draw(win, grid, ROWS, width), start, end)
-					bfs(lambda: draw(win, grid, ROWS, width), start, end)
-	
+					if(algs[curr_alg] == "a_star"):
+						a_star(lambda: draw(win, grid, ROWS, width), grid, start, end)
+					elif(algs[curr_alg] == "dijkstra"):
+						dijkstra(lambda: draw(win, grid, ROWS, width), grid, start, end)
+					elif(algs[curr_alg] == "dfs"):
+						dfs(lambda: draw(win, grid, ROWS, width), start, end)
+					elif(algs[curr_alg] == "bfs"):
+						bfs(lambda: draw(win, grid, ROWS, width), start, end)
+						
+				if event.key == pygame.K_RIGHT:
+					curr_alg = (curr_alg + 1)%4
+					if(algs[curr_alg] == "a_star"):
+						pygame.display.set_caption("A* Path Finding Algorthm")
+					elif(algs[curr_alg] == "dijkstra"):
+						pygame.display.set_caption("Dijkstra's Path Finding Algorthm")
+					elif(algs[curr_alg] == "dfs"):
+						pygame.display.set_caption("DFS Path Finding Algorthm")
+					elif(algs[curr_alg] == "bfs"):
+						pygame.display.set_caption("BFS Path Finding Algorthm")
+
 				if event.key == pygame.K_c:
 					start = None
 					end = None
