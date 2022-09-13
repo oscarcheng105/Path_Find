@@ -15,6 +15,6 @@
 ```
 * Select the start (blue) and end (red) point by left click, or cancel by right click
 * Add barriers if you wish after selecting the start & end points
-* Switch Algorithm by pressing the Right_Arrow on you keyboard
+* Switch Algorithm by pressing the RIGHT_ARROW on you keyboard
 * Clean the map by pressing C on you keyboard
 * Run the algorithm by pressing SPACE on your keyboard
